@@ -1,0 +1,56 @@
+// courses.js
+export const courseTabs = [
+  "Artificial Intelligence (AI)",
+  "Python",
+  "Microsoft Excel",
+  "AI Agents & Agentic AI",
+  "Digital Marketing",
+  "Amazon AWS",
+];
+
+export const aiCourses = [
+  {
+    id: 1,
+    img: "https://img-c.udemycdn.com/course/240x135/5678280_7616.jpg",
+    title: "The AI Engineer Course 2025: Complete AI Engineer Bootcamp",
+    instructor: "365 Careers",
+    tagType: "bestseller",
+    tagLabel: "Bestseller",
+    rating: "4.6",
+    ratingsCount: "10,801 ratings",
+    price: "E£349.99",
+  },
+  {
+    id: 2,
+    img: "https://img-c.udemycdn.com/course/240x135/5762430_54f0.jpg",
+    title: "Intro to AI Agents and Agentic AI",
+    instructor: "365 Careers",
+    tagType: "bestseller",
+    tagLabel: "Bestseller",
+    rating: "4.4",
+    ratingsCount: "895 ratings",
+    price: "E£349.99",
+  },
+  {
+    id: 3,
+    img: "https://img-c.udemycdn.com/course/240x135/5084408_e292.jpg",
+    title: "Artificial Intelligence (AI) Foundations for Developers",
+    instructor: "Rahul Rajat Singh",
+    tagType: "highest",
+    tagLabel: "Highest Rated",
+    rating: "5.0",
+    ratingsCount: "21 ratings",
+    price: "E£349.99",
+  },
+  {
+    id: 4,
+    img: "https://img-c.udemycdn.com/course/240x135/5026678_7cb8.jpg",
+    title: "The Complete Guide To AI Powered Salesforce Development",
+    instructor: "Matt Gerry",
+    tagType: "hot",
+    tagLabel: "Hot & New",
+    rating: "4.8",
+    ratingsCount: "74 ratings",
+    price: "E£349.99",
+  },
+];
