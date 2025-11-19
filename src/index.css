@@ -677,7 +677,7 @@ button {
 .trusted-section {
   margin-top: 40px;
   background-color: #f7f9fa; /* light gray band */
-  padding: 32px 24px;
+  padding: 56px 24px; /* larger vertical padding to match design */
 }
 
 .trusted-inner {
@@ -694,18 +694,56 @@ button {
 .trusted-logos {
   margin-top: 24px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center; /* center logos horizontally */
   align-items: center;
-  gap: 32px;
+  gap: 64px; /* generous spacing like the screenshot */
   flex-wrap: wrap;
 }
 
 .trusted-logo {
-  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 8px 12px;
+  color: #9ca3af;
+  letter-spacing: 0.02em;
+}
+
+.trusted-logo-img {
+  max-height: 48px; 
+  width: auto;
+  display: block;
+  filter: grayscale(100%) brightness(85%);
+  opacity: 0.85;
+  transition: transform 180ms ease, filter 180ms ease, opacity 180ms ease;
+  object-fit: contain;
+}
+
+.trusted-logo-fallback {
+  display: none;
+  font-size: 14px;
+  color: #6b7280;
   font-weight: 600;
-  color: #9ca3af;        
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
+  text-transform: none;
+}
+
+
+.trusted-logo:hover .trusted-logo-img,
+.trusted-logo:focus-within .trusted-logo-img {
+  filter: none;
+  opacity: 1;
+  transform: scale(1.04);
+}
+
+
+@media (max-width: 720px) {
+  .trusted-logos {
+    gap: 28px;
+  }
+  .trusted-logo-img {
+    max-height: 40px;
+  }
 }
 .simple-page {
   max-width: 1150px;

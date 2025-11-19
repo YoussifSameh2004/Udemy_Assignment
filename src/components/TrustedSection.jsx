@@ -11,9 +11,20 @@ function TrustedSection() {
         </p>
 
         <div className="trusted-logos">
-          {trustedCompanies.map((name) => (
-            <span key={name} className="trusted-logo">
-              {name}
+          {trustedCompanies.map((company) => (
+            <span key={company.name} className="trusted-logo">
+              <img
+                src={company.img}
+                alt={company.name}
+                className="trusted-logo-img"
+                onError={(e) => {
+                  // hide broken image and show fallback text
+                  e.target.style.display = "none";
+                  const fallback = e.target.nextElementSibling;
+                  if (fallback) fallback.style.display = "inline-block";
+                }}
+              />
+              <span className="trusted-logo-fallback">{company.name}</span>
             </span>
           ))}
         </div>

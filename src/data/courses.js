@@ -11,7 +11,7 @@ export const courseTabs = [
 export const aiCourses = [
   {
     id: 1,
-    img: "https://img-c.udemycdn.com/course/240x135/5678280_7616.jpg",
+    img: "https://img-c.udemycdn.com/course/240x135/6112535_7103.jpg",
     title: "The AI Engineer Course 2025: Complete AI Engineer Bootcamp",
     instructor: "365 Careers",
     tagType: "bestseller",
@@ -22,7 +22,7 @@ export const aiCourses = [
   },
   {
     id: 2,
-    img: "https://img-c.udemycdn.com/course/240x135/5762430_54f0.jpg",
+    img: "https://img-c.udemycdn.com/course/240x135/6791359_66d8_2.jpg",
     title: "Intro to AI Agents and Agentic AI",
     instructor: "365 Careers",
     tagType: "bestseller",
@@ -33,7 +33,7 @@ export const aiCourses = [
   },
   {
     id: 3,
-    img: "https://img-c.udemycdn.com/course/240x135/5084408_e292.jpg",
+    img: "https://img-c.udemycdn.com/course/240x135/6814079_b2f0_4.jpg",
     title: "Artificial Intelligence (AI) Foundations for Developers",
     instructor: "Rahul Rajat Singh",
     tagType: "highest",
@@ -44,7 +44,7 @@ export const aiCourses = [
   },
   {
     id: 4,
-    img: "https://img-c.udemycdn.com/course/240x135/5026678_7cb8.jpg",
+    img: "https://img-c.udemycdn.com/course/240x135/1990136_15e0_10.jpg",
     title: "The Complete Guide To AI Powered Salesforce Development",
     instructor: "Matt Gerry",
     tagType: "hot",
