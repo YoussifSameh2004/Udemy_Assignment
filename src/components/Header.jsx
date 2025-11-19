@@ -1,30 +1,45 @@
 import React from "react";
 
-function Header({ page, setPage, searchQuery, setSearchQuery, onSearch }) {
+function Header(props) {
+  const {
+    page,
+    setPage,
+    searchQuery,
+    setSearchQuery,
+    onSearch,
+  } = props;
+
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (!searchQuery.trim()) return;
     onSearch();
+  };
+
+  const handleLogoClick = () => {
+    setPage("home");
   };
 
   return (
     <>
-      {/* Promo bar */}
+      {/* top promo bar */}
       <div className="promo-section">
         <span>
           Prices as low as <strong>E£259.99</strong> | Get new skills risk-free.
           <span className="promo-timer"> Ends in 5h 58m 24s.</span>
         </span>
-        <button className="promo-close">×</button>
+        <button className="promo-close" type="button">
+          ×
+        </button>
       </div>
 
-      {/* Main header */}
+      {/* main header */}
       <header className="header">
-        <div className="logo" onClick={() => setPage("home")}>
+        <button className="logo" onClick={handleLogoClick}>
           <img
             src="https://frontends.udemycdn.com/frontends-homepage/staticx/udemy/images/v7/logo-udemy.svg"
             alt="Udemy"
           />
-        </div>
+        </button>
 
         <button className="text-link" onClick={() => setPage("explore")}>
           Explore
@@ -53,7 +68,9 @@ function Header({ page, setPage, searchQuery, setSearchQuery, onSearch }) {
           </button>
         </nav>
 
-        <button className="icon-btn">🛒</button>
+        <button className="icon-btn" type="button">
+          🛒
+        </button>
 
         <div className="auth-buttons">
           <button className="btn-outline" onClick={() => setPage("login")}>
@@ -62,7 +79,9 @@ function Header({ page, setPage, searchQuery, setSearchQuery, onSearch }) {
           <button className="btn-solid" onClick={() => setPage("signup")}>
             Sign up
           </button>
-          <button className="icon-btn globe-btn">🌐</button>
+          <button className="icon-btn globe-btn" type="button">
+            🌐
+          </button>
         </div>
       </header>
     </>

@@ -1,4 +1,3 @@
-// courses.js
 export const courseTabs = [
   "Artificial Intelligence (AI)",
   "Python",

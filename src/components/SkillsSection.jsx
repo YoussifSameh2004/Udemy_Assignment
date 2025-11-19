@@ -20,10 +20,12 @@ function SkillsSection() {
                 className="skills-card-image"
                 style={{ backgroundImage: `url('${card.img}')` }}
               />
+
               <div className="skills-card-body">
                 <div className="skills-card-meta">
                   <span className="skills-card-tag">{card.tag}</span>
                 </div>
+
                 <h3>{card.title}</h3>
                 <span className="skills-card-arrow">→</span>
               </div>
@@ -31,13 +33,19 @@ function SkillsSection() {
           ))}
 
           <div className="skills-slider-controls">
-            <button className="skills-slider-arrow">‹</button>
+            <button className="skills-slider-arrow" type="button">
+              ‹
+            </button>
+
             <div className="skills-dots">
               <span className="dot" />
               <span className="dot dot-active" />
               <span className="dot" />
             </div>
-            <button className="skills-slider-arrow">›</button>
+
+            <button className="skills-slider-arrow" type="button">
+              ›
+            </button>
           </div>
         </div>
       </div>

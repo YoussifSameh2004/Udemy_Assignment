@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./index.css";
+
 import Header from "./components/Header";
 import HomePage from "./pages/HomePage";
 import SimplePage from "./pages/SimplePage";
@@ -14,28 +15,22 @@ function App() {
   };
 
   const renderContent = () => {
-    switch (page) {
-      case "explore":
-        return <SimplePage title="Explore" />;
-      case "plans":
-        return <SimplePage title="Plans & Pricing" />;
-      case "business":
-        return <SimplePage title="Udemy Business" />;
-      case "teach":
-        return <SimplePage title="Teach on Udemy" />;
-      case "login":
-        return <SimplePage title="Login" />;
-      case "signup":
-        return <SimplePage title="Sign up" />;
-      case "search":
-        return (
-          <section className="simple-page">
-            <h2>Search results for: “{searchQuery}”</h2>
-          </section>
-        );
-      default:
-        return <HomePage />;
+    if (page === "explore") return <SimplePage title="Explore" />;
+    if (page === "plans") return <SimplePage title="Plans & Pricing" />;
+    if (page === "business") return <SimplePage title="Udemy Business" />;
+    if (page === "teach") return <SimplePage title="Teach on Udemy" />;
+    if (page === "login") return <SimplePage title="Login" />;
+    if (page === "signup") return <SimplePage title="Sign up" />;
+
+    if (page === "search") {
+      return (
+        <section className="simple-page">
+          <h2>Search results for: “{searchQuery}”</h2>
+        </section>
+      );
     }
+
+    return <HomePage />;
   };
 
   return (
@@ -47,6 +42,7 @@ function App() {
         setSearchQuery={setSearchQuery}
         onSearch={handleSearch}
       />
+
       <main className="content">{renderContent()}</main>
     </div>
   );

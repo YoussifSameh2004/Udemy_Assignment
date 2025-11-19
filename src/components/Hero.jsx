@@ -3,7 +3,9 @@ import React from "react";
 function Hero() {
   return (
     <section className="hero">
-      <button className="hero-arrow hero-arrow-left">‹</button>
+      <button className="hero-arrow hero-arrow-left" type="button">
+        ‹
+      </button>
 
       <div className="hero-inner">
         <div className="hero-card">
@@ -12,7 +14,9 @@ function Hero() {
             If you&apos;re new to Udemy, we&apos;ve got good news: For a limited
             time, courses start at just E£259.99 for new learners!
           </p>
-          <button className="btn-solid hero-btn">Sign up now</button>
+          <button className="btn-solid hero-btn" type="button">
+            Sign up now
+          </button>
         </div>
 
         <div
@@ -24,7 +28,9 @@ function Hero() {
         />
       </div>
 
-      <button className="hero-arrow hero-arrow-right">›</button>
+      <button className="hero-arrow hero-arrow-right" type="button">
+        ›
+      </button>
     </section>
   );
 }

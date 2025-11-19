@@ -6,8 +6,7 @@ function TrustedSection() {
     <section className="trusted-section">
       <div className="trusted-inner">
         <p className="trusted-text">
-          Trusted by over 17,000 companies and millions of learners around the
-          world
+          Trusted by over 17,000 companies and millions of learners around the world
         </p>
 
         <div className="trusted-logos">
@@ -18,13 +17,14 @@ function TrustedSection() {
                 alt={company.name}
                 className="trusted-logo-img"
                 onError={(e) => {
-                  // hide broken image and show fallback text
                   e.target.style.display = "none";
                   const fallback = e.target.nextElementSibling;
                   if (fallback) fallback.style.display = "inline-block";
                 }}
               />
-              <span className="trusted-logo-fallback">{company.name}</span>
+              <span className="trusted-logo-fallback">
+                {company.name}
+              </span>
             </span>
           ))}
         </div>

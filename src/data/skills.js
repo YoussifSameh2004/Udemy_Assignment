@@ -1,4 +1,3 @@
-// skills.js
 export const skillsCards = [
   {
     id: 1,
